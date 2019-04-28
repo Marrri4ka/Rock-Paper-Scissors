@@ -16,7 +16,14 @@ namespace Game.Models
 
     public string FindWinner()
     {
-      return "Winner player1";
+
+      string compare = _player1+" "+_player2;
+      Dictionary<string,string> dict = new Dictionary <string, string>();
+      dict.Add ("rock scissors", "winner1");
+      dict.Add ("paper rock", "winner1");
+      dict.Add ("paper scissors ", "winner2");
+
+      return dict[compare];
     }
   }
 }
